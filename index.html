@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Pug-Sass </title>
+    <!-- Styles-->
+    <link href="./assets/css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header Section-->
+      <section id="header">
+        <h1 class="header__brand">MY WEBSITE</h1>
+        <div class="header__menu">
+          <input id="header__menu--toggle" type="checkbox">
+          <label class="header__menu--icon" for="header__menu--toggle"><i class="fa fa-bars"></i></label>
+          <ul><a href="#hero">
+              <li>Home</li></a><a href="#services">
+              <li>Services</li></a><a href="#contact">
+              <li>Contact</li></a><a href="#about">
+              <li>About</li></a></ul>
+        </div>
+      </section>
+      <!-- End  Header Section-->
+      <!--  Hero Section  -->
+      <section class="hero container" id="hero">
+        <div class="hero__info">
+          <h1 class="hero__info--heading">I Design<br>Your Dream</h1>
+          <p class="hero__info--subheading">I am a developer</p><a class="btn hero__info--button" href="#" type="button">Portfolio</a>
+        </div>
+        <div class="hero__img"><img src="../assets/images/img-1.jpg" alt></div>
+      </section>
+      <!--  End Hero Section  -->
+      <!--  About section  -->
+      <section class="about container" id="about">
+        <div class="about__info">
+          <h1 class="section-heading about__info--heading">About Me</h1>
+          <p class="about__info--desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit quidem ullam voluptates repellendus explicabo placeat, expedita ratione saepe eaque dolorum sed deleniti, odit numquam, nostrum tempore quos corrupti rem.</p><a class="btn about__info--button" href="#" type="button">Download Resume</a>
+        </div>
+        <div class="about__img">
+          <div class="about__img--wrapper"><img src="../assets/images/img-1.jpg" alt></div>
+        </div>
+      </section>
+      <!--  End About section  -->
+      <!--  Service Section  -->
+      <section class="services container" id="services">
+        <div class="services__header">
+          <h1 class="section-heading services__header--heading">services</h1>
+          <p class="services__header--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit quidem ullam voluptates repellendus explicabo placeat, expedita ratione saepe eaque dolorum sed deleniti, odit numquam, nostrum tempore quos corrupti rem.</p>
+        </div>
+        <div class="services__info">
+          <div class="service">
+            <div class="service__card">
+              <div class="service__card--front"><i class="fa fa-palette"></i>
+                <h1 class="service-front--heading">Web Design</h1>
+              </div>
+              <div class="service__card--back">
+                <h1 class="service-back--heading">Web Design</h1>
+                <p class="service-back--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+              </div>
+            </div>
+          </div>
+          <div class="service">
+            <div class="service__card">
+              <div class="service__card--front"><i class="fa fa-palette"></i>
+                <h1 class="service-front--heading">Web Design</h1>
+              </div>
+              <div class="service__card--back">
+                <h1 class="service-back--heading">Web Design</h1>
+                <p class="service-back--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+              </div>
+            </div>
+          </div>
+          <div class="service">
+            <div class="service__card">
+              <div class="service__card--front"><i class="fa fa-palette"></i>
+                <h1 class="service-front--heading">Web Design</h1>
+              </div>
+              <div class="service__card--back">
+                <h1 class="service-back--heading">Web Design</h1>
+                <p class="service-back--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  End Service Section  -->
+      <!-- Contact Section-->
+      <section class="contact container" id="contact">
+        <div class="contact__heading">
+          <h1 class="section-heading">Contact Us</h1>
+          <p>Welcome all peope to contact me</p>
+        </div>
+        <div class="contact__letter">
+          <div class="contact__letter--img"><img src="./assets/images/map2.png" style="width:100%"></div>
+          <div class="contact__letter--form">
+            <form>
+              <label>First Name</label>
+              <input type="text" placeholder="Your name..">
+              <label>Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.."></textarea><a class="btn contact__letter--form__btn">Submit</a>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Sectipn-->
+      <!-- Hire Section-->
+      <section class="hire container" id="hire">
+        <h1 class="hire-heading">To build your dream website</h1><a class="btn hire-button" href="#" type="button">Join Us !!</a>
+      </section>
+      <!-- End Hire Section-->
+      <!-- Footer Section-->
+      <footer class="footer container" id="footer">
+        <div class="footer__contact">
+          <h1 class="footer__contact--heading">Contact With Me</h1>
+          <p class="footer__contact--info">Email: yourname@gamil.com</p>
+          <p class="footer__contact--info">Mobile: 234 234 2342</p>
+        </div>
+        <div class="footer__social">
+          <h1 class="footer__social--heading">Follow Me</h1>
+          <div class="footer__social--icon"><a href="#"></a><i class="fab fa-facebook"></i><a href="#"></a><i class="fab fa-instagram-square"></i><a href="#"></a><i class="fab fa-behance-square"></i><a href="#"></a><i class="fab fa-dribbble-square"></i></div>
+        </div>
+      </footer>
+      <!-- End Footer Section-->
+    </div>
+    <!-- Scripts-->
+    <script src="./assets/js/scripts.min.js"></script>
+  </body>
+</html>

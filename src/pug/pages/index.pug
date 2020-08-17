@@ -1,0 +1,84 @@
+extends ../layouts/default-layout.pug
+
+mixin servicesCard(heading,des)
+  .service
+    .service__card
+      .service__card--front
+        i.fa.fa-palette
+        h1.service-front--heading= heading
+      .service__card--back
+            h1.service-back--heading= heading
+            p.service-back--desc= des
+
+block content
+
+
+  //  Hero Section  
+  section#hero.hero.container
+    .hero__info
+      h1.hero__info--heading I Design
+        br 
+        | Your Dream
+      p.hero__info--subheading I am a developer
+      a.btn.hero__info--button(href='#', type='button') Portfolio
+    .hero__img
+      img(src='../assets/images/img-1.jpg', alt)
+  //  End Hero Section  
+  
+  //  About section  
+  section#about.about.container
+    .about__info
+      h1.section-heading.about__info--heading About Me
+      - var paragraph = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit quidem ullam voluptates repellendus explicabo placeat, expedita ratione saepe eaque dolorum sed deleniti, odit numquam, nostrum tempore quos corrupti rem."
+      p.about__info--desc  #{paragraph}
+      a.btn.about__info--button(href='#', type='button') Download Resume
+    .about__img
+      .about__img--wrapper
+        img(src='../assets/images/img-1.jpg', alt)
+        
+  //  End About section  
+
+  //  Service Section  
+  section#services.services.container
+    .services__header
+      h1.section-heading.services__header--heading services
+      p.services__header--desc #{paragraph}
+    .services__info
+      +servicesCard("Web Design","Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!")
+      +servicesCard("Web Design","Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!")
+      +servicesCard("Web Design","Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!")
+      
+  //  End Service Section  
+  
+  // Contact Section
+  section#contact.contact.container
+    .contact__heading
+      h1.section-heading Contact Us
+      p Welcome all peope to contact me
+    .contact__letter
+      .contact__letter--img
+        img(src='./assets/images/map2.png', style='width:100%')
+      .contact__letter--form
+        form
+          label First Name
+          input(type='text', placeholder='Your name..')
+          label Subject
+          textarea#subject(name='subject', placeholder='Write something..')
+          a.btn.contact__letter--form__btn Submit
+  // End Contact Sectipn
+
+
+  
+  // Hire Section
+  section#hire.hire.container
+    h1.hire-heading To build your dream website
+    a.btn.hire-button(href='#' type='button') Join Us !!
+  // End Hire Section
+
+
+  
+          
+
+
+
+  

@@ -1,0 +1,294 @@
+@import "components/components"
+/* Hero Section
+.hero
+    @extend %flex-content
+    min-height: 80vh
+    width: 100%
+    padding-top: 50px
+    background-color: black
+    flex-direction: column-reverse
+    
+    @include tablet 
+        height: 100vh
+        flex-direction: row
+        padding-left: 10%
+        justify-content: center
+        align-content: center
+    
+    .hero__info
+        width: 100%
+        text-align: center
+        padding-bottom: 20px
+        @include tablet
+            max-width: 30%
+            text-align: left
+
+        
+        .hero__info--heading
+            font-size: 4rem
+            font-weight: 500
+            color: whitesmoke
+
+        .hero__info--subheading
+            font-size: 1.5rem
+            text-transform: uppercase
+            letter-spacing: .5rem
+            color: whitesmoke
+            @include tablet 
+                font-size: 1.3rem
+                
+
+        .hero__info--button
+            border: solid 1px $white
+
+
+    .hero__img
+        height: auto
+        width: 80%
+        margin-bottom: 3rem
+        @include tablet 
+            min-width: 400px
+            max-width: 1000px
+
+    img
+        height: 100%
+        width: 100%
+
+/* End Hero Section
+
+/* About Section
+
+.about
+    width: 100%
+    min-height: 50vh
+    padding: 10rem 5rem
+    flex-direction: column
+    @include tablet 
+        width: 80%
+        margin: 0 auto
+        flex-direction: row
+
+    .about__info
+        text-align: center
+        @include tablet 
+            width: 50%
+            text-align: left
+            padding-right: 15rem
+
+        
+
+        .about__info--desc
+            font-size: 1.3rem
+            line-height: 2rem
+            margin-top: 10px
+        .about__info--button
+            font-size: 1rem
+
+            &:hover
+                background-color: $black
+        
+    .about__img
+        margin-top: 50px
+        display: block
+
+        .about__img--wrapper
+            margin-top: 50px
+            height: auto
+            max-width: 400px
+            position: relative
+            display: inline-block
+
+            img
+                height: 100%
+                width: 100%
+
+            &::after
+                position: absolute
+                content: ''
+                right: -2rem
+                top: -10%
+                width: 70%
+                height: 120%
+                background-color: rgba(34, 33, 33, 0.158)
+                z-index: -1
+
+/* End About Section
+
+/* Services section
+
+.services
+  flex-direction: column
+  min-height: 60vh
+  padding: 10rem 5rem
+  .services__header
+    width: 100%
+    text-align: center
+    .services__header--desc
+      font-size: 1.3rem
+      line-height: 2rem
+      margin-top: 20px
+      @include tablet
+        max-width: 500px
+        padding-top: 20px
+        margin: 0 auto
+
+  
+  .services__info
+    @extend %flex-content
+    margin-top: 30px
+    width: 100%
+    flex-direction: column
+    @include tablet
+        flex-direction: row
+        width: 80%
+
+    .service
+      width: 100%
+      min-height: 300px
+      position: relative
+      margin: 5px
+      @include tablet
+        margin: 0
+
+      .service__card
+        position: absolute
+        height: 100%
+        width: 100%
+        transform-style: preserve-3d
+        transition: 0.5s ease transform
+        display: block
+
+        .service__card--front
+          @extend  %reset-card
+          @extend %flex-content
+          flex-direction: column
+          backface-visibility: hidden
+          padding: 10px
+          
+          i
+            font-size: 4rem
+            color: $black
+            margin-bottom: 10px
+
+          .service-front--heading
+            font-size: 2.5rem
+
+        .service__card--back
+          @extend  %reset-card
+          @extend %flex-content
+          flex-direction: column
+          backface-visibility: hidden
+          padding: 10px
+          transform: rotateY(180deg)
+
+          .service-back--heading
+            font-size: 2.5rem
+          
+          .service-back--desc
+            font-size: 1.3rem
+            margin-top: 10px
+            text-align: center
+         
+
+      &:hover .service__card
+        transform: rotateY(180deg)
+
+      &:nth-child(2) .service__card--front
+        position: relative
+        color: $white
+
+        &::after
+          @extend  %reset-card
+          content: ''
+          z-index: -1
+          
+
+        i
+          color: $white
+      
+
+/* End Services section
+/* Contact Section
+.contact
+  min-height: 80vh
+  @extend %flex-content
+  flex-direction: column
+  .contact__heading
+    @extend %flex-content
+    flex-direction: column
+    margin: 40px
+    h1
+      font-size: 20px
+      padding-bottom: 10px
+      @include tablet
+        font-size: 40px
+    p 
+      font-size: 15px
+  .contact__letter
+    display: flex
+    flex-direction: column
+    width: 80%
+    height: auto
+    
+    .contact__letter--img
+      position: relative
+      margin-right: 20px
+      img   
+        width: 100%
+        height: 100%
+        opacity: 0.6
+      @include tablet
+        width: 50% 
+
+    .contact__letter--form
+      
+      margin-top: 20px
+      input[type=text],textarea 
+        width: 100%
+        padding: 12px
+        border: 1px solid #ccc
+        margin-top: 6px
+        margin-bottom: 16px
+        resize: vertical
+        @include tablet
+          width: 100%
+      label
+        font-size: 20px
+      .contact__letter--form__btn
+        display: flex
+        margin-bottom: 10px
+        padding: 15px
+        justify-content: center
+       
+    @include tablet 
+      flex-direction: row
+/* End Contact Section
+
+       
+
+    
+
+      
+/* Hire Section
+.hire
+    min-height: 5vh
+    flex-direction: column
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.212)
+    padding: 3rem 2rem
+    @include tablet
+      min-height: 10vh
+
+    .hire-heading
+        color: $black
+        font-size: 2.2rem
+        text-align: center
+
+    .hire-button
+        
+        transition: .3s ease background-color
+
+        &:hover
+            background-color: $black
+/* End of Hire Section
+    
